@@ -25,8 +25,8 @@ const HeroSection = () => {
         <div className="container mx-auto px-4 pt-24 pb-28">
           <div className="grid items-center gap-10 lg:grid-cols-12">
             <div className="lg:col-span-7">
-              <p className="font-arabic text-gold-light text-lg md:text-xl mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-                بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+              <p className="font-arabic text-gold-light text-xl md:text-2xl mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+                اللهم صل على محمد وسلم
               </p>
               <h1
                 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-5 animate-fade-in-up leading-tight"
