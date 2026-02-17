@@ -34,7 +34,10 @@ const HeroSection = () => {
               >
                 Pondok Pesantren
                 <br />
-                <span className="text-gradient-gold">Mahir Arriyadl</span>
+                <span className="inline-flex items-baseline">
+                  <span className="text-gradient-gold inline-block overflow-hidden whitespace-nowrap align-bottom animate-typing">Mahir Arriyadl</span>
+                  <span className="ml-1 inline-block w-[2px] h-[1em] bg-gold-light animate-caret" aria-hidden="true" />
+                </span>
               </h1>
               <p
                 className="font-body text-primary-foreground/85 text-lg md:text-xl max-w-2xl mb-8 animate-fade-in-up"
