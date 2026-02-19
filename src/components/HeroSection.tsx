@@ -1,18 +1,60 @@
-import heroImage from "@/assets/hero-pesantren.png";
+import { useEffect, useMemo, useState } from "react";
+import heroImage from "@/assets/hero-pesantren.webp";
 import patternImage from "@/assets/islamic-pattern.jpg";
 
+import slide1 from "@/assets/1.webp";
+import slide2 from "@/assets/2.webp";
+import slide3 from "@/assets/3.webp";
+
 const HeroSection = () => {
+  const slides = useMemo(() => [heroImage, slide1, slide2, slide3], []);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [loaded, setLoaded] = useState<boolean[]>(() => slides.map((_, i) => i === 0));
+
+  useEffect(() => {
+    slides.forEach((src, idx) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        setLoaded((prev) => {
+          if (prev[idx]) return prev;
+          const next = prev.slice();
+          next[idx] = true;
+          return next;
+        });
+      };
+    });
+  }, [slides]);
+
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      setActiveSlide((i) => {
+        const next = (i + 1) % slides.length;
+        return loaded[next] ? next : i;
+      });
+    }, 6000);
+
+    return () => window.clearInterval(id);
+  }, [loaded, slides.length]);
+
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="beranda" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background image */}
-      <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Pondok Pesantren Mahir Arriyadl"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-emerald-deep/60 a-emerald-deep/45 to-emerald-deep/70"/>
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-deep/55 a-emerald-deep/25 to-transparent" />
+      <div className="absolute inset-0 bg-emerald-deep">
+        {slides.map((src, idx) => (
+          <img
+            key={src}
+            src={src}
+            alt={idx === 0 ? "Pondok Pesantren Mahir Arriyadl" : ""}
+            aria-hidden={idx === 0 ? undefined : true}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+              idx === activeSlide ? "opacity-100" : "opacity-0"
+            }`}
+            loading={idx === 0 ? "eager" : "lazy"}
+          />
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-b from-emerald-deep/60 via-emerald-deep/45 to-emerald-deep/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-deep/55 via-emerald-deep/25 to-transparent" />
       </div>
 
       {/* Pattern overlay */}
@@ -24,20 +66,18 @@ const HeroSection = () => {
       <div className="relative z-10 w-full">
         <div className="container mx-auto px-4 pt-24 pb-28">
           <div className="grid items-center gap-10 lg:grid-cols-12">
-            <div className="lg:col-span-7">
-              <p className="font-arabic text-gold-light text-xl md:text-2xl mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-                اللهم صل على محمد وسلم
-              </p>
+            <div className="lg:col-span-12">
               <h1
                 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-5 animate-fade-in-up leading-tight"
                 style={{ animationDelay: "0.25s" }}
               >
-                Pondok Pesantren
+                Pon. Pes.
                 <br />
                 <span className="inline-flex items-baseline">
                   <span className="text-gradient-gold inline-block overflow-hidden whitespace-nowrap align-bottom animate-typing">Mahir Arriyadl</span>
                   <span className="ml-1 inline-block w-[2px] h-[1em] bg-gold-light animate-caret" aria-hidden="true" />
                 </span>
+                <span className="block">Ringinagung</span>
               </h1>
               <p
                 className="font-body text-primary-foreground/85 text-lg md:text-xl max-w-2xl mb-8 animate-fade-in-up"
@@ -49,35 +89,16 @@ const HeroSection = () => {
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 animate-fade-in-up" style={{ animationDelay: "0.55s" }}>
                 <a
                   href="#pendaftaran"
-                  className="inline-flex items-center justify-center bg-gradient-gold text-accent-foreground font-display font-bold px-8 py-4 rounded-xl text-base md:text-lg shadow-gold hover:opacity-90 transition-opacity"
+                  className="inline-flex items-center justify-center bg-gradient-gold text-accent-foreground font-display font-bold px-4 py-2.5 rounded-lg text-xs sm:text-base md:text-lg sm:px-8 sm:py-4 shadow-gold hover:opacity-90 transition-opacity"
                 >
                   Pendaftaran Santri Baru
                 </a>
                 <a
                   href="#brosur"
-                  className="inline-flex items-center justify-center bg-background/10 backdrop-blur-sm text-primary-foreground font-display font-bold px-8 py-4 rounded-xl text-base md:text-lg border border-primary-foreground/20 hover:bg-background/15 transition-colors"
+                  className="inline-flex items-center justify-center bg-background/10 backdrop-blur-sm text-primary-foreground font-display font-bold px-4 py-2.5 rounded-lg text-xs sm:text-base md:text-lg sm:px-8 sm:py-4 border border-primary-foreground/20 hover:bg-background/15 transition-colors"
                 >
                   Lihat Brosur
                 </a>
-              </div>
-            </div>
-
-            <div className="lg:col-span-5">
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1 animate-fade-in-up" style={{ animationDelay: "0.65s" }}>
-                <div className="rounded-2xl border border-primary-foreground/15 bg-background/10 backdrop-blur-sm p-5">
-                  <div className="font-display text-primary-foreground text-lg font-bold mb-1">Pembinaan Akhlak</div>
-                  <div className="font-body text-primary-foreground/80 text-sm">Pembentukan karakter dan adab dalam keseharian santri.</div>
-                </div>
-                <div className="rounded-2xl border border-primary-foreground/15 bg-background/10 backdrop-blur-sm p-5">
-                  <div className="font-display text-primary-foreground text-lg font-bold mb-1">Ilmu & Prestasi</div>
-                  <div className="font-body text-primary-foreground/80 text-sm">Pembelajaran terarah untuk mendorong santri berprestasi.</div>
-                </div>
-                <div className="rounded-2xl border border-primary-foreground/15 bg-background/10 backdrop-blur-sm p-5 sm:col-span-2 lg:col-span-1">
-                  <div className="font-display text-primary-foreground text-lg font-bold mb-1">Informasi Pendaftaran</div>
-                  <div className="font-body text-primary-foreground/80 text-sm">
-                    Lihat detail persyaratan dan alur pendaftaran di bagian brosur & pendaftaran.
-                  </div>
-                </div>
               </div>
             </div>
           </div>

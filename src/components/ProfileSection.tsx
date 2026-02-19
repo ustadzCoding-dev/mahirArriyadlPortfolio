@@ -1,61 +1,93 @@
-import { BookOpen, GraduationCap } from "lucide-react";
-
-const programs = [
-  {
-    icon: BookOpen,
-    title: "Program Salafiyyah",
-    subtitle: "Madrasah Al-Asna",
-    description:
-      "Program pendidikan klasik pesantren yang berfokus pada pendalaman kitab kuning, ilmu Al-Qur'an, Hadits, Fiqih, Nahwu, Sharaf, dan ilmu-ilmu keislaman lainnya. Santri dibimbing langsung oleh para asatidz yang berpengalaman dalam tradisi keilmuan salaf.",
-    features: ["Kajian Kitab Kuning", "Tahfidz Al-Qur'an", "Bahasa Arab Intensif", "Ilmu Fiqih & Ushul Fiqih"],
-  },
-  {
-    icon: GraduationCap,
-    title: "Program Kemenag",
-    subtitle: "Kurikulum Kementerian Agama",
-    description:
-      "Program pendidikan formal yang mengikuti kurikulum Kementerian Agama RI, memadukan ilmu agama dan ilmu umum. Lulusan mendapatkan ijazah resmi yang diakui secara nasional untuk melanjutkan ke jenjang pendidikan yang lebih tinggi.",
-    features: ["Ijazah Resmi Kemenag", "Kurikulum Terpadu", "Ilmu Umum & Agama", "Persiapan Perguruan Tinggi"],
-  },
-];
-
-const ProfileSection = () => {
+const AboutSection = () => {
   return (
     <section id="profil" className="py-20 bg-cream">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-16">
-          <p className="text-emerald-light font-body text-sm uppercase tracking-widest mb-2">Profil Pesantren</p>
+          <p className="text-emerald-light font-body text-sm uppercase tracking-widest mb-2">Tentang Pesantren</p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Program <span className="text-primary">Pendidikan</span>
+            Tentang <span className="text-primary">Pondok Pesantren</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-gold mx-auto rounded-full" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {programs.map((program) => (
-            <div
-              key={program.title}
-              className="bg-card rounded-xl p-8 shadow-emerald border border-border hover:border-gold/40 transition-colors group"
-            >
-              <div className="w-14 h-14 rounded-lg bg-gradient-emerald flex items-center justify-center mb-6">
-                <program.icon className="w-7 h-7 text-primary-foreground" />
-              </div>
-              <h3 className="font-display text-2xl font-bold text-foreground mb-1">{program.title}</h3>
-              <p className="text-gold font-body font-semibold text-sm mb-4">{program.subtitle}</p>
-              <p className="text-muted-foreground font-body leading-relaxed mb-6">{program.description}</p>
-              <ul className="space-y-2">
-                {program.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3 text-foreground font-body text-sm">
-                    <span className="w-2 h-2 rounded-full bg-gradient-gold flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        <div className="bg-card rounded-2xl p-8 md:p-12 shadow-emerald border border-border">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-muted-foreground font-body leading-relaxed mb-4">
+              Di Ringinagung, Keling, Kepung, berdiri salah satu pesantren tertua di Kabupaten Kediri: Pondok Pesantren Mahir Arriyadl.
+              Sekitar tahun 1870 M, Hadrotus Syaikh Imam Nawawi mendirikan pesantren ini di Alas Simpenan, Desa Keling, Kepung, Kediri,
+              berasaskan Ahlussunnah wal Jama’ah.
+            </p>
+            <p className="text-muted-foreground font-body leading-relaxed mb-4">
+              Perjuangan membuka hutan tersebut berujung pada berdirinya Masjid Ringinagung. Di tengah berbagai hambatan, beliau bermunajat
+              dan mendapat ilham untuk mengamalkan Sholawat Nawawiyyah atau Sholawat Ringinagung, “Allahumma Shalli ‘ala Muhammad wa Sallim”,
+              yang hingga kini terus dilestarikan oleh para santri.
+            </p>
+            <p className="text-muted-foreground font-body leading-relaxed">
+              Dari tempat inilah, selama lebih dari satu abad, tradisi santri, keilmuan, dan dakwah Islamiyah terus menyala, melintasi zaman
+              hingga hari ini.
+            </p>
+          </div>
         </div>
       </div>
     </section>
+  );
+};
+
+const PendidikanSection = () => {
+  return (
+    <section id="pendidikan" className="py-20 bg-background">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="text-center mb-16">
+          <p className="text-emerald-light font-body text-sm uppercase tracking-widest mb-2">Pendidikan</p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Pendidikan <span className="text-primary">Salafiyyah</span>
+          </h2>
+          <div className="w-24 h-1 bg-gradient-gold mx-auto rounded-full" />
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-cream rounded-xl p-6 border border-border">
+            <h3 className="font-display text-lg font-bold text-foreground mb-2">Madrasah Al Asna</h3>
+            <p className="text-muted-foreground font-body text-sm leading-relaxed mb-4">
+              Sebagai jantung keilmuan di Pondok Pesantren Mahir Arriyadl, Madrasah Salafiyyah Al Asna menyelenggarakan jenjang:
+            </p>
+            <ul className="space-y-2">
+              {["SP (Sekolah Persiapan)", "Madrasah Ibtidaiyyah", "Tsanawiyyah", "Aliyyah", "Majelis Musyawarah"].map((item) => (
+                <li key={item} className="flex items-center gap-3 text-foreground font-body text-sm">
+                  <span className="w-2 h-2 rounded-full bg-gradient-gold flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="bg-cream rounded-xl p-6 border border-border">
+            <h3 className="font-display text-lg font-bold text-foreground mb-2">Pengajian Kitab Kuning</h3>
+            <p className="text-muted-foreground font-body text-sm leading-relaxed">
+              Pengajian kitab kuning (Al Kutub Al Mu’tabarah) menjadi ruh pendidikan dengan metode klasik seperti sorogan dan bandongan.
+              Tradisi ini menanamkan kedalaman ilmu, ketelitian, serta adab.
+            </p>
+          </div>
+
+          <div className="bg-cream rounded-xl p-6 border border-border">
+            <h3 className="font-display text-lg font-bold text-foreground mb-2">Pengembangan Keilmuan</h3>
+            <p className="text-muted-foreground font-body text-sm leading-relaxed">
+              Kegiatan seperti khotbah, bahtsul masail, dan qiraah bit taghanni menjadi sarana pembinaan intelektual dan akhlak guna
+              membentuk santri yang alim, matang, dan berkarakter.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ProfileSection = () => {
+  return (
+    <>
+      <AboutSection />
+      <PendidikanSection />
+    </>
   );
 };
 

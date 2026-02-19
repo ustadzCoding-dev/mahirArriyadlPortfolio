@@ -1,5 +1,11 @@
-import { Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Phone, Youtube } from "lucide-react";
 import patternImage from "@/assets/islamic-pattern.jpg";
+
+const MAPS_PLACE_URL =
+  "https://www.google.com/maps/place/PONDOK+PESANTREN+KYAI+IMAM+NAWAWI/@-7.7706586,112.2473013,17z/data=!3m1!4b1!4m6!3m5!1s0x2e7867a9f9682889:0x4a3b9ae4cfd2a453!8m2!3d-7.7706639!4d112.2498762!16s%2Fg%2F11jfcwq98x";
+
+const MAPS_EMBED_URL =
+  "https://www.google.com/maps?q=-7.7706639,112.2498762&z=17&output=embed";
 
 const Footer = () => {
   return (
@@ -34,10 +40,52 @@ const Footer = () => {
                 <Phone className="w-4 h-4" />
                 085735884008
               </a>
-              <div className="flex items-start gap-3 text-primary-foreground/80 font-body text-sm">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>Pondok Pesantren Mahir Arriyadl</span>
+              <a
+                href="https://www.instagram.com/pondokmahirarriyadl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-primary-foreground/80 hover:text-gold-light transition-colors font-body text-sm"
+              >
+                <Instagram className="w-4 h-4" />
+                @pondokmahirarriyadl
+              </a>
+              <div className="flex items-center gap-3 text-primary-foreground/80 font-body text-sm">
+                <Facebook className="w-4 h-4" />
+                <span>Pondok Mahir Arriyadl</span>
               </div>
+              <a
+                href="https://www.youtube.com/@pondokmahirarriyadl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-primary-foreground/80 hover:text-gold-light transition-colors font-body text-sm"
+              >
+                <Youtube className="w-4 h-4" />
+                @pondokmahirarriyadl
+              </a>
+            </div>
+
+            <div className="mt-6">
+              <h5 className="font-display font-bold mb-3 text-gold-light">Lokasi</h5>
+              <div className="rounded-xl overflow-hidden border border-primary-foreground/20 bg-black/10">
+                <div className="aspect-[16/10]">
+                  <iframe
+                    title="Lokasi Pondok Pesantren"
+                    src={MAPS_EMBED_URL}
+                    className="w-full h-full"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+              <a
+                href={MAPS_PLACE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex text-primary-foreground/80 hover:text-gold-light transition-colors font-body text-sm"
+              >
+                Buka di Google Maps
+              </a>
             </div>
           </div>
 
@@ -45,7 +93,7 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-bold mb-4 text-gold-light">Tautan</h4>
             <ul className="space-y-2 font-body text-sm">
-              <li><a href="#profil" className="text-primary-foreground/80 hover:text-gold-light transition-colors">Profil Pesantren</a></li>
+              <li><a href="#profil" className="text-primary-foreground/80 hover:text-gold-light transition-colors">Tentang Pesantren</a></li>
               <li><a href="#brosur" className="text-primary-foreground/80 hover:text-gold-light transition-colors">Brosur</a></li>
               <li><a href="#pendaftaran" className="text-primary-foreground/80 hover:text-gold-light transition-colors">Pendaftaran</a></li>
             </ul>

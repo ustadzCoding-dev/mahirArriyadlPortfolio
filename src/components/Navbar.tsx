@@ -2,9 +2,10 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Beranda", href: "#" },
-  { label: "Profil", href: "#profil" },
+  { label: "Beranda", href: "#beranda" },
+  { label: "Tentang", href: "#profil" },
   { label: "Brosur", href: "#brosur" },
+  { label: "Galeri", href: "#galeri" },
   { label: "Pendaftaran", href: "#pendaftaran" },
 ];
 
@@ -14,7 +15,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-emerald-deep/95 backdrop-blur-sm border-b border-primary-foreground/10">
       <div className="container mx-auto px-4 max-w-6xl flex items-center justify-between h-16">
-        <a href="#" className="font-display font-bold text-primary-foreground text-lg">
+        <a href="#beranda" className="font-display font-bold text-primary-foreground text-lg">
           PP <span className="text-gradient-gold">Mahir Arriyadl</span>
         </a>
 
