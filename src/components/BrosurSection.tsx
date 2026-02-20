@@ -6,7 +6,7 @@ const DRIVE_PREVIEW_URL =
 
 const BrosurSection = () => {
   return (
-    <section id="brosur" className="py-20 bg-background">
+    <section id="brosur" className="py-16 sm:py-20 bg-background">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-12">
           <p className="text-emerald-light font-body text-sm uppercase tracking-widest mb-2">Informasi Lengkap</p>
@@ -26,12 +26,12 @@ const BrosurSection = () => {
             />
           </div>
 
-          <div className="p-4 border-t border-border flex items-center justify-center gap-3 flex-wrap">
+          <div className="p-4 border-t border-border flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
             <a
               href={DRIVE_VIEW_URL}
               target="_blank"
               rel="noreferrer"
-              className="px-4 py-2 rounded-xl bg-background border border-border font-body text-sm text-foreground hover:bg-muted"
+              className="px-3 py-2 sm:px-4 rounded-xl bg-background border border-border font-body text-xs sm:text-sm text-foreground hover:bg-muted"
             >
               Buka PDF
             </a>
@@ -39,7 +39,7 @@ const BrosurSection = () => {
               href={DRIVE_VIEW_URL}
               target="_blank"
               rel="noreferrer"
-              className="px-4 py-2 rounded-xl bg-gradient-emerald text-primary-foreground font-body text-sm shadow-emerald"
+              className="px-3 py-2 sm:px-4 rounded-xl bg-gradient-emerald text-primary-foreground font-body text-xs sm:text-sm shadow-emerald"
             >
               Download PDF
             </a>

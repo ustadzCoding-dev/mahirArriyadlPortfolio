@@ -15,7 +15,7 @@ const Footer = () => {
         <img src={patternImage} alt="" className="w-full h-full object-cover" aria-hidden="true" />
       </div>
 
-      <div className="container mx-auto px-4 max-w-6xl py-12">
+      <div className="container mx-auto px-4 max-w-6xl py-10 sm:py-12">
         <div className="grid md:grid-cols-3 gap-8 items-start">
           {/* Brand */}
           <div>
@@ -67,7 +67,7 @@ const Footer = () => {
             <div className="mt-6">
               <h5 className="font-display font-bold mb-3 text-gold-light">Lokasi</h5>
               <div className="rounded-xl overflow-hidden border border-primary-foreground/20 bg-black/10">
-                <div className="aspect-[16/10]">
+                <div className="aspect-[4/3] sm:aspect-[16/10]">
                   <iframe
                     title="Lokasi Pondok Pesantren"
                     src={MAPS_EMBED_URL}

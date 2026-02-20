@@ -1,6 +1,6 @@
 const AboutSection = () => {
   return (
-    <section id="profil" className="py-20 bg-cream">
+    <section id="profil" className="py-16 sm:py-20 bg-cream">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-16">
           <p className="text-emerald-light font-body text-sm uppercase tracking-widest mb-2">Tentang Pesantren</p>
@@ -10,21 +10,18 @@ const AboutSection = () => {
           <div className="w-24 h-1 bg-gradient-gold mx-auto rounded-full" />
         </div>
 
-        <div className="bg-card rounded-2xl p-8 md:p-12 shadow-emerald border border-border">
+        <div className="bg-card rounded-2xl p-6 sm:p-8 md:p-12 shadow-emerald border border-border">
           <div className="max-w-4xl mx-auto">
-            <p className="text-muted-foreground font-body leading-relaxed mb-4">
-              Di Ringinagung, Keling, Kepung, berdiri salah satu pesantren tertua di Kabupaten Kediri: Pondok Pesantren Mahir Arriyadl.
-              Sekitar tahun 1870 M, Hadrotus Syaikh Imam Nawawi mendirikan pesantren ini di Alas Simpenan, Desa Keling, Kepung, Kediri,
-              berasaskan Ahlussunnah wal Jama’ah.
+            <p className="text-muted-foreground font-body leading-relaxed mb-4 text-justify indent-6">
+              Di Ringinagung, Keling, Kepung. Berdiri salah satu pesantren tertua di Kabupaten Kediri yaitu Pondok Pesantren Mahir Arriyadl.
+              Sekitar tahun 1870 M, Hadrotus Syaikh Imam Nawawi mendirikan pesantren ini di Alas Simpenan, Desa Keling, Kepung, Kediri.
+              Berasaskan Ahlussunnah wal Jama’ah.
             </p>
-            <p className="text-muted-foreground font-body leading-relaxed mb-4">
+            <p className="text-muted-foreground font-body leading-relaxed text-justify indent-6">
               Perjuangan membuka hutan tersebut berujung pada berdirinya Masjid Ringinagung. Di tengah berbagai hambatan, beliau bermunajat
               dan mendapat ilham untuk mengamalkan Sholawat Nawawiyyah atau Sholawat Ringinagung, “Allahumma Shalli ‘ala Muhammad wa Sallim”,
-              yang hingga kini terus dilestarikan oleh para santri.
-            </p>
-            <p className="text-muted-foreground font-body leading-relaxed">
-              Dari tempat inilah, selama lebih dari satu abad, tradisi santri, keilmuan, dan dakwah Islamiyah terus menyala, melintasi zaman
-              hingga hari ini.
+              yang hingga kini terus dilestarikan oleh para santri. Dari tempat inilah, selama lebih dari satu abad, tradisi santri, keilmuan,
+              dan dakwah Islamiyah terus menyala, melintasi zaman hingga hari ini.
             </p>
           </div>
         </div>
@@ -35,7 +32,7 @@ const AboutSection = () => {
 
 const PendidikanSection = () => {
   return (
-    <section id="pendidikan" className="py-20 bg-background">
+    <section id="pendidikan" className="py-16 sm:py-20 bg-background">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-16">
           <p className="text-emerald-light font-body text-sm uppercase tracking-widest mb-2">Pendidikan</p>

@@ -5,7 +5,6 @@ const navLinks = [
   { label: "Beranda", href: "#beranda" },
   { label: "Tentang", href: "#profil" },
   { label: "Brosur", href: "#brosur" },
-  { label: "Galeri", href: "#galeri" },
   { label: "Pendaftaran", href: "#pendaftaran" },
 ];
 
