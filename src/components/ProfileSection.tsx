@@ -19,7 +19,7 @@ const AboutSection = () => {
             </p>
             <p className="text-muted-foreground font-body leading-relaxed text-justify indent-6">
               Perjuangan membuka hutan tersebut berujung pada berdirinya Masjid Ringinagung. Di tengah berbagai hambatan, beliau bermunajat
-              dan mendapat ilham untuk mengamalkan Sholawat Nawawiyyah atau Sholawat Ringinagung, “Allahumma Shalli ‘ala Muhammad wa Sallim”,
+              dan mendapat ilham untuk mengamalkan Sholawat Nawawiyyah atau Sholawat Ringinagung, اللّهمّ صلّ على محمّد وسلّم“Allahumma Shalli ‘ala Muhammad wa Sallim”,
               yang hingga kini terus dilestarikan oleh para santri. Dari tempat inilah, selama lebih dari satu abad, tradisi santri, keilmuan,
               dan dakwah Islamiyah terus menyala, melintasi zaman hingga hari ini.
             </p>
@@ -45,11 +45,11 @@ const PendidikanSection = () => {
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-cream rounded-xl p-6 border border-border">
             <h3 className="font-display text-lg font-bold text-foreground mb-2">Madrasah Al Asna</h3>
-            <p className="text-muted-foreground font-body text-sm leading-relaxed mb-4">
+            <p className="text-muted-foreground font-body text-sm leading-relaxed mb-4 te">
               Sebagai jantung keilmuan di Pondok Pesantren Mahir Arriyadl, Madrasah Salafiyyah Al Asna menyelenggarakan jenjang:
             </p>
             <ul className="space-y-2">
-              {["SP (Sekolah Persiapan)", "Madrasah Ibtidaiyyah", "Tsanawiyyah", "Aliyyah", "Majelis Musyawarah"].map((item) => (
+              {["SP (Sekolah Persiapan)", "Madrasah Ibtidaiyyah", "Madrasah Tsanawiyyah", "Madrasah Aliyyah", "Majelis Musyawarah"].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-foreground font-body text-sm">
                   <span className="w-2 h-2 rounded-full bg-gradient-gold flex-shrink-0" />
                   {item}
@@ -60,17 +60,18 @@ const PendidikanSection = () => {
 
           <div className="bg-cream rounded-xl p-6 border border-border">
             <h3 className="font-display text-lg font-bold text-foreground mb-2">Pengajian Kitab Kuning</h3>
-            <p className="text-muted-foreground font-body text-sm leading-relaxed">
+            <p className="text-muted-foreground font-body text-sm leading-relaxed text-justify">
               Pengajian kitab kuning (Al Kutub Al Mu’tabarah) menjadi ruh pendidikan dengan metode klasik seperti sorogan dan bandongan.
               Tradisi ini menanamkan kedalaman ilmu, ketelitian, serta adab.
             </p>
           </div>
 
           <div className="bg-cream rounded-xl p-6 border border-border">
-            <h3 className="font-display text-lg font-bold text-foreground mb-2">Pengembangan Keilmuan</h3>
-            <p className="text-muted-foreground font-body text-sm leading-relaxed">
-              Kegiatan seperti khotbah, bahtsul masail, dan qiraah bit taghanni menjadi sarana pembinaan intelektual dan akhlak guna
-              membentuk santri yang alim, matang, dan berkarakter.
+            <h3 className="font-display text-lg font-bold text-foreground mb-2">Kegiatan Ilmiyyah & Qur'aniyyah</h3>
+            <p className="text-muted-foreground font-body text-sm leading-relaxed text-justify">
+              Kegiatan seperti khotobah, bahtsul masail dan qira’ah bit taghanni menjadi sarana pembinaan intelektual dan akhlak guna membentuk santri yang alim, matang dan berkarakter.
+              Sejalan dengan itu, dalam bidang Al-Qur’an, Madrasah Diniyyah Yanbu’a Qur’aniyyah membina santri agar mampu membaca Al-Qur’an secara tartil sesuai makhraj dan kaidah tajwid.
+              Sementara dalam bidang falakiyah, Lajnah Falak Hisab menjadi rujukan penentuan waktu sholat serta penyusunan kalender hisab pesantren.
             </p>
           </div>
         </div>

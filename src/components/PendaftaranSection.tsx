@@ -1,4 +1,4 @@
-const GOOGLE_FORM_URL = "#";
+const GOOGLE_FORM_URL = "https://forms.gle/Qmh4V45rbNZKAVFM7";
 const WHATSAPP_URL = "https://wa.me/6285735884008";
 
 const PendaftaranSection = () => {
@@ -22,10 +22,9 @@ const PendaftaranSection = () => {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
               <a
                 href={GOOGLE_FORM_URL}
-                target={GOOGLE_FORM_URL === "#" ? undefined : "_blank"}
-                rel={GOOGLE_FORM_URL === "#" ? undefined : "noopener noreferrer"}
-                aria-disabled={GOOGLE_FORM_URL === "#"}
-                className="inline-flex items-center justify-center gap-3 bg-gradient-gold text-accent-foreground font-display font-bold px-6 py-3 sm:px-10 sm:py-4 rounded-lg text-sm sm:text-lg shadow-gold hover:opacity-90 transition-opacity opacity-70 pointer-events-none"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 bg-gradient-gold text-accent-foreground font-display font-bold px-6 py-3 sm:px-10 sm:py-4 rounded-lg text-sm sm:text-lg shadow-gold hover:opacity-90 transition-opacity"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />

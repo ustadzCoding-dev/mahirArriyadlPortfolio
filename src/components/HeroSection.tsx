@@ -83,7 +83,7 @@ const HeroSection = () => {
                 className="font-body text-primary-foreground/85 text-base sm:text-lg md:text-xl max-w-2xl mb-6 sm:mb-8 animate-fade-in-up"
                 style={{ animationDelay: "0.4s" }}
               >
-                Mendidik Generasi Berilmu, Berakhlak, dan Berprestasi
+                Merawat Ajaran Salaf, Mendidik Generasi Berilmu, Berakhlak dan Berprestasi
               </p>
 
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 animate-fade-in-up md:justify-start" style={{ animationDelay: "0.55s" }}>

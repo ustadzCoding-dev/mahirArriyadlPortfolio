@@ -22,9 +22,6 @@ const Footer = () => {
             <h3 className="font-display text-xl font-bold mb-2">
               Pondok Pesantren <span className="text-gradient-gold">Mahir Arriyadl</span>
             </h3>
-            <p className="text-primary-foreground/70 font-body text-sm leading-relaxed">
-              Mendidik Generasi Berilmu, Berakhlak, dan Berprestasi
-            </p>
           </div>
 
           {/* Contact */}

@@ -1,8 +1,8 @@
 const DRIVE_VIEW_URL =
-  "https://drive.google.com/file/d/1oNl7TXOuw_27QdaCkbB1gk3E4m1CLNt_/view?usp=sharing";
+  "https://drive.google.com/file/d/18wNPvOlBvZxPNtTVMojox0vS50Db9w5a/view?usp=sharing";
 
 const DRIVE_PREVIEW_URL =
-  "https://drive.google.com/file/d/1oNl7TXOuw_27QdaCkbB1gk3E4m1CLNt_/preview";
+  "https://drive.google.com/file/d/18wNPvOlBvZxPNtTVMojox0vS50Db9w5a/preview";
 
 const BrosurSection = () => {
   return (
